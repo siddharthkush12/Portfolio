@@ -50,10 +50,10 @@ function Projects() {
                   ))}
                 </div>
                 <div className='flex gap-4'>
-                  <a href={project.link} target='_blank'><Button text={project.siteText}/></a>
+                  <a href={project.link} target='_blank'><Button text={project.siteText} className='rounded-2xl'/></a>
                   {
                     project.live &&
-                    <a href={project.git} target='_blank'><Button text={'Explore on GitHub'}/></a>
+                    <a href={project.git} target='_blank'><Button text={'Explore on GitHub'} className='rounded-2xl'/></a>
                   }
                 </div>
               </div>
