@@ -17,6 +17,7 @@ import c3 from "../assets/projects/c3.png";
 import po1 from "../assets/projects/po1.png";
 import po2 from "../assets/projects/po2.png";
 import po3 from "../assets/projects/po3.png";
+import ho1 from "../assets/projects/ho1.png";
 
 
 export const HERO_CONTENT = `I am an enthusiastic MERN stack developer with a strong foundation in building modern web applications using MongoDB, Express.js, React, and Node.js. As a fresher, I am constantly learning and applying new skills to real-world projects. I also have a deep interest in solving Data Structures and Algorithms problems, which helps me write efficient and optimized code. I'm excited to contribute to impactful tech solutions and grow as a full-stack developer.`;
@@ -42,7 +43,7 @@ export const PROJECTS = [
     live: true,
     link: "https://hospital-project-1-front.onrender.com",
     git: "https://github.com/siddharthkush12/Hospital_project", 
-    image: [po1, po2, po3], // Replace these with actual images of the project
+    image: [ho1],
     description:
       "A comprehensive Hospital Management System designed to streamline administrative tasks and enhance patient care. Built with Node.js, Express.js, MongoDB, and React. The system includes features like patient registration, appointment scheduling, medical records management, billing, and a directory of nearby hospitals. It offers an intuitive user interface for doctors, nurses, and admins to manage daily operations effectively and efficiently, while also providing patients with a quick way to find nearby healthcare providers.",
     technologies: ["Node.js", "Express.js", "MongoDB", "React", "JWT", "Redux", "TailwindCSS","ShadCn"], 
