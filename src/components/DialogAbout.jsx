@@ -26,7 +26,7 @@ function DialogAbout() {
         <div className="flex flex-col gap-9 md:w-1/2">
           <span className="text-stone-50 text-lg font-semibold">About Me</span>
           <p className="text-stone-100 text-sm">{HERO_CONTENT}</p>
-          <a href="https://github.com/siddharthkush12/Portfolio/blob/main/SiddharthResume.pdf" download="SiddharthResume.pdf">
+          <a href="/SiddharthResume.pdf" download="SiddharthResume.pdf">
           <ButtonRotatingBackgroundGradient buttontext={"Download Resume"}/>
           </a>
         </div>
