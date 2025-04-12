@@ -9,7 +9,7 @@ import CursorGlow from './components/CursorGlow'
 
 function App() {
   return (
-    <div className='overflow-hidden text-stone-300 antialiased'>
+    <div className='overflow-hidden text-stone-300'>
       <CursorGlow/>
       <div className='fixed inset-0 -z-10'>
         <div className="relative h-full w-full bg-black">

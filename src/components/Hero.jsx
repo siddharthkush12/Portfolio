@@ -1,69 +1,66 @@
-import React from 'react'
-import profilePic from '../assets/pro.webp'
-import { HERO_CONTENT } from '../constants'
-import { motion } from 'framer-motion'
-import ButtonRotatingBackgroundGradient from './ButtonRotatingBackgroundGradient'
-
-
-const containerVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: {
-        opacity: 1,
-        x: 0,
-        transition: {
-            duration: 0.5,
-            staggerChildren: 0.5,
-        }
-    }
-}
-
-const childVariants = {
-    hidden: { opacity: 0, x: -100 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.5 } }
-}
+import React, { useState } from "react";
+import image from "../assets/image.png";
+import { Typewriter } from "react-simple-typewriter";
+import ButtonRotatingBackgroundGradient from "./ButtonRotatingBackgroundGradient";
+import { Dialog } from "./ui/dialog";
+import DialogAbout from "./DialogAbout";
 
 function Hero() {
-    return (
-        <div className='pb-4 lg:mb-20 lg:pt-10'>
-            <div className='flex flex-wrap lg:flex-row-reverse'>
-               
-                <div className='w-full lg:w-1/2'>
-                    <div className='flex justify-center lg:p-8'>
-                        <motion.img
-                            src={profilePic}
-                            className='border border-stone-900 rounded-full'
-                            initial={{ x: 100, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            transition={{ duration: 0.5, delay: 0.5 }}
-                            width={650}
-                            height={650}
-                            alt="profile"
-                        />
-                    </div>
-                </div>
+  const [dialogOpen, setDialogOpen] = useState(false);
 
-                
-                <div className='w-full lg:w-1/2'>
-                    <motion.div
-                        initial="hidden"
-                        animate="visible"
-                        variants={containerVariants}
-                        className='flex flex-col items-center lg:items-start mt-10'>
-                        <motion.h2 variants={childVariants} className='pb-2 text-4xl tracking-tighter lg:text-8xl'>
-                            Siddharth Kushwaha
-                        </motion.h2>
-                        <motion.span variants={childVariants} className='text-3xl bg-gradient-to-r from-stone-300 to-stone-600 bg-clip-text tracking-tight text-transparent'>
-                            MERN Developer
-                        </motion.span>
-                        <motion.p variants={childVariants} className='leading-relaxed tracking-tight text-xl py-6 max-w-xl my-2'>
-                            {HERO_CONTENT}
-                        </motion.p>
-                        <ButtonRotatingBackgroundGradient buttontext={"Download Resume"} />
-                    </motion.div>
-                </div>
-            </div>
+  return (
+    <div className="pb-4 lg:mb-20 lg:pt-10">
+      <div className="flex flex-wrap lg:flex-row-reverse">
+        <div className="w-full lg:w-1/2">
+          <div className="flex justify-center lg:p-8">
+            <img
+              src={image}
+              className="border border-stone-900 rounded-full h-120 w-120"
+              alt="profile"
+            />
+          </div>
         </div>
-    )
+
+        <div className="w-full lg:w-1/2">
+          <div className="flex flex-col items-center lg:items-start mt-10">
+            <h2 className="pb-2 text-4xl tracking-tighter lg:text-8xl">
+              Siddharth Kushwaha
+            </h2>
+            <span className="text-3xl bg-gradient-to-r from-stone-300 via-stone-600 to-stone-300 bg-clip-text tracking-tight text-transparent ">
+              MERN Developer
+            </span>
+            <p className="text-stone mt-2 text-center lg:text-left text-sm md:text-xl max-w-md h-6 md:mb-30 mb-10 bg-gradient-to-r from-[#E2CBFF] to-[#393BB2] bg-clip-text text-transparent">
+              <Typewriter
+                words={[
+                  "Turning ideas into full-stack web experiences.",
+                  "Crafting clean UIs with React & Tailwind.",
+                  "Solving real-world problems with code.",
+                  "Passionate MERN Stack Developer.",
+                ]}
+                loop={0}
+                cursor
+                cursorStyle="|"
+                typeSpeed={90}
+                deleteSpeed={50}
+                delaySpeed={2000}
+              />
+            </p>
+            <ButtonRotatingBackgroundGradient
+              buttontext={"About Me"}
+              setDialogOpen={setDialogOpen}
+            />
+            <Dialog
+              open={dialogOpen}
+              onOpenChange={setDialogOpen}
+              className="bg-white p-10"
+            >
+              <DialogAbout />
+            </Dialog>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default Hero
+export default Hero;

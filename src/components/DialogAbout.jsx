@@ -1,5 +1,8 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { DialogContent } from './ui/dialog'
+import { HERO_CONTENT } from '@/constants'
+import Button from './Button'
+import ButtonRotatingBackgroundGradient from './ButtonRotatingBackgroundGradient'
 
 const techIcons = [
   { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', alt: 'react' },
@@ -16,31 +19,35 @@ const techIcons = [
   { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', alt: 'python' },
 ]
 
-
-
-function Tech() {
+function DialogAbout() {
   return (
-    <div className='pb-30 mt-20 md:mt-40'>
-      <h2
-        
-        className='mb-30 text-center text-4xl text-stone-100'
-      >
-        Technologies
-      </h2>
+    <DialogContent className="bg-stone-500 rounded-2xl md:min-w-8/12">
+      <div className="flex flex-col md:flex-row justify-between gap-8 p-4">
+        <div className="flex flex-col gap-9 md:w-1/2">
+          <span className="text-stone-50 text-lg font-semibold">About Me</span>
+          <p className="text-stone-100 text-sm">{HERO_CONTENT}</p>
+          <a href="https://github.com/siddharthkush12/Portfolio/blob/main/SiddharthResume.pdf" download="SiddharthResume.pdf">
+          <ButtonRotatingBackgroundGradient buttontext={"Download Resume"}/>
+          </a>
+        </div>
 
-      <div className='grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-6 md:gap-30 gap-y-10'>
-        {techIcons.map((icon, index) => (
-          <div
-            key={icon.alt}
-            
-            className='flex justify-center items-center'
-          >
-            <img src={icon.src} alt={icon.alt} width={80} height={80} />
+        <div className="flex flex-col gap-9 md:w-1/2">
+          <span className="text-stone-50 text-lg font-semibold">Technologies</span>
+          <div className="flex flex-wrap gap-5">
+            {techIcons.map((icon, index) => (
+              <img
+                key={index}
+                src={icon.src}
+                alt={icon.alt}
+                className="h-15 w-15 animate-bounce"
+                style={{ animationDuration: `${Math.random() * 2 + 1}s` }}
+              />
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
+    </DialogContent>
   )
 }
 
-export default Tech
+export default DialogAbout
