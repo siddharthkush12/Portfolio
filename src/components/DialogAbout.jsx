@@ -22,32 +22,35 @@ const techIcons = [
 
 function DialogAbout() {
   return (
-    <DialogContent className="bg-stone-900 rounded-2xl md:min-w-8/12">
-      <div className="flex flex-col md:flex-row justify-between gap-8 p-4">
-        <div className="flex flex-col gap-2 md:w-1/2">
-          <span className="text-stone-50 text-lg font-semibold">About Me</span>
-          <p className="text-stone-100 text-sm mb-7">{HERO_CONTENT}</p>
-          <a href="/SiddharthResume.pdf" download="SiddharthResume.pdf">
-          <ButtonRotatingBackgroundGradient buttontext={"Download Resume"}/>
-          </a>
-        </div>
+    <DialogContent className="bg-stone-900 rounded-2xl w-full max-w-[95%] sm:max-w-[90%] md:max-w-8/12 p-4 
+  max-h-[90vh] overflow-y-auto md:min-h-[50vh] md:overflow-y-visible">
+  <div className="flex flex-col md:flex-row justify-between gap-8">
+    {/* About Me Section */}
+    <div className="flex flex-col gap-2 w-full md:w-1/2">
+      <span className="text-stone-50 text-lg font-semibold">About Me</span>
+      <p className="text-stone-100 text-sm mb-7">{HERO_CONTENT}</p>
+      <a href="/SiddharthResume.pdf" download="SiddharthResume.pdf">
+        <ButtonRotatingBackgroundGradient buttontext={"Download Resume"} />
+      </a>
+    </div>
 
-        <div className="flex flex-col gap-9 md:w-1/2">
-          <span className="text-stone-50 text-lg font-semibold">Technologies</span>
-          <div className="flex flex-wrap gap-5">
-            {techIcons.map((icon, index) => (
-              <img
-                key={index}
-                src={icon.src}
-                alt={icon.alt}
-                className="h-15 w-15 animate-bounce"
-                style={{ animationDuration: `${Math.random() * 2 + 1}s` }}
-              />
-            ))}
-          </div>
-        </div>
+    {/* Technologies Section */}
+    <div className="flex flex-col gap-6 w-full md:w-1/2">
+      <span className="text-stone-50 text-lg font-semibold">Technologies</span>
+      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+        {techIcons.map((icon, index) => (
+          <img
+            key={index}
+            src={icon.src}
+            alt={icon.alt}
+            className="h-12 w-12 animate-bounce"
+            style={{ animationDuration: `${Math.random() * 2 + 1}s` }}
+          />
+        ))}
       </div>
-    </DialogContent>
+    </div>
+  </div>
+</DialogContent>
   )
 }
 

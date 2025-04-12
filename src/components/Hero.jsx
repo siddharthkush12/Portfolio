@@ -4,7 +4,6 @@ import { Typewriter } from "react-simple-typewriter";
 import ButtonRotatingBackgroundGradient from "./ButtonRotatingBackgroundGradient";
 import { Dialog } from "./ui/dialog";
 import DialogAbout from "./DialogAbout";
-import Button from "./Button";
 
 function Hero() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -12,12 +11,11 @@ function Hero() {
   return (
     <div className="pb-4 lg:mb-20 lg:pt-10">
       <div className="flex flex-wrap lg:flex-row-reverse">
-
-        <div className="w-full lg:w-1/2">
-          <div className="flex justify-center lg:p-8">
+      <div className="w-full lg:w-1/2">
+          <div className="flex justify-center lg:p-4">
             <img
               src={image}
-              className="border border-stone-900 rounded-full h-120 w-120"
+              className="border border-stone-900 rounded-3xl h-85 w-90 sm:h-100 sm:w-120 lg:h-120 lg:w-120 object-cover transform transition-all duration-500 hover:rotate-6 hover:scale-105"
               alt="profile"
             />
           </div>

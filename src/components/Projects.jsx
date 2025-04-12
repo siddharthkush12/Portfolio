@@ -9,7 +9,7 @@ function Projects() {
   
   
   return (
-    <div className="relative my-30 px-4 sm:px-6 lg:px-1">
+    <div className="relative my-10 md:my-30 px-4 sm:px-6 lg:px-1">
       <div className="hidden md:block absolute top-14 bg-gradient-to-b from-[#E2CBFF] via-[#393BB2] to-[#E2CBFF] left-1/2 transform -translate-x-1/2 h-full w-1 z-0" />
 
       <h2 className="mb-16 text-center text-4xl text-stone-100 relative z-10">
@@ -49,12 +49,15 @@ function Projects() {
                     </span>
                   ))}
                 </div>
-                <div className='flex gap-4'>
-                  <a href={project.link} target='_blank'><Button text={project.siteText} className='rounded-2xl'/></a>
-                  {
-                    project.live &&
-                    <a href={project.git} target='_blank'><Button text={'Explore on GitHub'} className='rounded-2xl'/></a>
-                  }
+                <div className="flex flex-wrap gap-4 items-center">
+                   <a href={project.link} target="_blank">
+                     <Button text={project.siteText} className="rounded-2xl" />
+                   </a>
+                   {project.live && (
+                     <a href={project.git} target="_blank">
+                       <Button text={"Explore on GitHub"} className="rounded-2xl" />
+                     </a>
+                   )}
                 </div>
               </div>
 
