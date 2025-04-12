@@ -6,7 +6,10 @@ import { Textarea } from './ui/textarea'
 import Button from './Button'
 import logo from '../assets/logo.png'
 import emailjs from '@emailjs/browser'
-import { toast } from 'sonner'
+import { toast, Toaster } from 'sonner'
+
+
+
 
 const initialFormData = {
   name: '',
@@ -16,18 +19,18 @@ const initialFormData = {
 
 function Contact() {
   const [formData, setFormData] = useState(initialFormData)
+  
   const formRef = useRef()
 
   function sendEmail(e) {
-    e.preventDefault()
-
+    e.preventDefault() 
+ 
     emailjs.sendForm(
-      'service_wypu0yu',
-      'template_urlu9vr',
-      formRef.current,  
-      'mvajjc_NkdpdWLPZf'
-    )
-      .then(() => {
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      formRef.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    ).then(() => {
         toast('Message sent successfully')
         setFormData(initialFormData)
         formRef.current.reset() 
@@ -36,6 +39,7 @@ function Contact() {
         console.error(error)
         toast('Something went wrong')
       })
+      
   }
 
   return (
