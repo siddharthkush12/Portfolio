@@ -4,6 +4,7 @@ import { Typewriter } from "react-simple-typewriter";
 import ButtonRotatingBackgroundGradient from "./ButtonRotatingBackgroundGradient";
 import { Dialog } from "./ui/dialog";
 import DialogAbout from "./DialogAbout";
+import Button from "./Button";
 
 function Hero() {
   const [dialogOpen, setDialogOpen] = useState(false);
@@ -11,6 +12,7 @@ function Hero() {
   return (
     <div className="pb-4 lg:mb-20 lg:pt-10">
       <div className="flex flex-wrap lg:flex-row-reverse">
+
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center lg:p-8">
             <img
@@ -39,9 +41,9 @@ function Hero() {
                 ]}
                 loop={0}
                 cursor
-                cursorStyle="|"
+                cursorStyle=""
                 typeSpeed={90}
-                deleteSpeed={50}
+                deleteSpeed={70}
                 delaySpeed={2000}
               />
             </p>

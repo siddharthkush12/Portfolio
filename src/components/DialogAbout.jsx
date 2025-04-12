@@ -17,15 +17,16 @@ const techIcons = [
   { src: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/c/c-plain.svg', alt: 'c' },
   { src: 'https://res.cloudinary.com/di4eksvat/image/upload/v1744383088/c_m2lljt.svg', alt: 'c++' },
   { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', alt: 'python' },
+  
 ]
 
 function DialogAbout() {
   return (
-    <DialogContent className="bg-stone-500 rounded-2xl md:min-w-8/12">
+    <DialogContent className="bg-stone-900 rounded-2xl md:min-w-8/12">
       <div className="flex flex-col md:flex-row justify-between gap-8 p-4">
-        <div className="flex flex-col gap-9 md:w-1/2">
+        <div className="flex flex-col gap-2 md:w-1/2">
           <span className="text-stone-50 text-lg font-semibold">About Me</span>
-          <p className="text-stone-100 text-sm">{HERO_CONTENT}</p>
+          <p className="text-stone-100 text-sm mb-7">{HERO_CONTENT}</p>
           <a href="/SiddharthResume.pdf" download="SiddharthResume.pdf">
           <ButtonRotatingBackgroundGradient buttontext={"Download Resume"}/>
           </a>
