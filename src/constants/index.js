@@ -54,7 +54,7 @@ export const PROJECTS = [
     live:true,
     link:"/",
     git:"https://github.com/siddharthkush12/Learning_projects/tree/main/02_megablog",
-    image: [b1, b2, b3, b4],
+    image: [b2, b1, b3, b4],
     description:
       "DevScribe is a modern blogging platform built using React and Appwrite that enables users to create, edit, and share their own blog posts. The app supports secure authentication, rich text editing, real-time database updates, and a sleek, responsive UI. It includes user profile management, blog categorization, and a comment system to foster community engagement.",
     technologies: [
