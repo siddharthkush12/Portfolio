@@ -38,17 +38,6 @@ export const PROJECTS = [
 
   },
   {
-    title: "Hospital Management System",
-    siteText: "Visit the Hospital Management System",
-    live: true,
-    link: "https://hospital-project-1-front.onrender.com",
-    git: "https://github.com/siddharthkush12/Hospital_project", 
-    image: [ho1],
-    description:
-      "A comprehensive Hospital Management System designed to streamline administrative tasks and enhance patient care. Built with Node.js, Express.js, MongoDB, and React. The system includes features like patient registration, appointment scheduling, medical records management, billing, and a directory of nearby hospitals. It offers an intuitive user interface for doctors, nurses, and admins to manage daily operations effectively and efficiently, while also providing patients with a quick way to find nearby healthcare providers.",
-    technologies: ["Node.js", "Express.js", "MongoDB", "React", "JWT", "Redux", "TailwindCSS","ShadCn"], 
-  },
-  {
     title: "Portfolio Website (MyPortfolio)",
     siteText: "Visit My Portfolio",
     live: true,
@@ -58,6 +47,17 @@ export const PROJECTS = [
     description:
       "A modern, responsive portfolio website showcasing my skills, projects, and achievements. Built with React, Vite, TailwindCSS, and custom API integration for the contact form. The website features a clean UI/UX design, smooth animations, and detailed project displays to give visitors a professional and interactive experience.",
     technologies: ["HTML", "TailwindCSS", "React", "Vite", "EmailJS", "ShadCn"],
+  },
+  {
+    title: "Hospital Management System",
+    siteText: "Visit the Hospital Management System",
+    live: true,
+    link: "https://hospital-project-1-front.onrender.com",
+    git: "https://github.com/siddharthkush12/Hospital_project", 
+    image: [ho1],
+    description:
+      "A comprehensive Hospital Management System designed to streamline administrative tasks and enhance patient care. Built with Node.js, Express.js, MongoDB, and React. The system includes features like patient registration, appointment scheduling, medical records management, billing, and a directory of nearby hospitals. It offers an intuitive user interface for doctors, nurses, and admins to manage daily operations effectively and efficiently, while also providing patients with a quick way to find nearby healthcare providers.",
+    technologies: ["Node.js", "Express.js", "MongoDB", "React", "JWT", "Redux", "TailwindCSS","ShadCn"], 
   },
  
   {
