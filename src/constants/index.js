@@ -28,7 +28,7 @@ export const PROJECTS = [
     title: "E-Commerce Website (CLOSIFY)",
     siteText:"Visit Cartify",
     live:true,
-    link:"",
+    link:"https://e-commerce-frontend-sqtb.onrender.com/auth/login",
     git:"https://github.com/siddharthkush12/E-commerce",
     image: [p1,p2,p3,p4,p5,p6],
     description:
