@@ -17,7 +17,8 @@ const techIcons = [
   { src: 'https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/c/c-plain.svg', alt: 'c' },
   { src: 'https://res.cloudinary.com/di4eksvat/image/upload/v1744383088/c_m2lljt.svg', alt: 'c++' },
   { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg', alt: 'python' },
-  
+  { src: "https://vitejs.dev/logo.svg", alt:"Vite Logo"}
+
 ]
 
 function DialogAbout() {
@@ -37,7 +38,7 @@ function DialogAbout() {
     {/* Technologies Section */}
     <div className="flex flex-col gap-6 w-full md:w-1/2">
       <span className="text-stone-50 text-lg font-semibold">Technologies</span>
-      <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+      <div className="flex flex-wrap gap-4 md:gap-10 justify-center md:justify-start">
         {techIcons.map((icon, index) => (
           <img
             key={index}
