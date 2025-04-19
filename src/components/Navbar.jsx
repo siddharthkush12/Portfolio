@@ -21,7 +21,7 @@ function Navbar() {
              <a href="https://www.instagram.com/siddharth_kush2002/" target='_blank' aria-label="Instagram">
                 <FaInstagram color='white'/>
              </a>
-             <a href="https://twitter.com/siddharth_kush" target='_blank' aria-label="Twitter">
+             <a href="https://x.com/siddharthK0202" target='_blank' aria-label="Twitter">
                 <FaXTwitter color='white'/>
              </a>
         </div>
