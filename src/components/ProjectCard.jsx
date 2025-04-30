@@ -5,15 +5,16 @@ import { Card, CardContent } from "./ui/card";
 function ProjectCard({ cardItem, className }) {
   
   return (
-    <Carousel className="w-full max-w-lg mx-auto">
+    <Carousel className="w-full">
       <CarouselContent>
         {cardItem.image.map((image, index) => (
           <CarouselItem key={index} className="p-2">
             <Card>
-              <CardContent className="p-0">
+              <CardContent className="p-0 rounded-2xl">
                 <img
                   src={image}
                   alt="image not found"
+                  className="rounded-2xl"
                 />
               </CardContent>
             </Card>

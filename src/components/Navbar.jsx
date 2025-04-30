@@ -11,18 +11,18 @@ function Navbar() {
                 <img src={logo} alt="logo" className='mx-2' width={60} height={35}/>
             </a>
         </div>
-        <div className='my-8 flex items-center justify-center gap-4 text-2xl'>
+        <div className='m-4 md:my-8 flex items-center justify-center gap-4 text-2xl'>
              <a href="https://www.linkedin.com/in/siddharth02022002/" target='_blank' aria-label="LinkedIn">
-                <FaLinkedin color='white'/>
+                <FaLinkedin color='#0077B5'/>
              </a>
              <a href="https://github.com/siddharthkush12" target='_blank' aria-label="GitHub">
-                <FaGithubSquare color='white'/>
+                <FaGithubSquare color='black'/>
              </a>
              <a href="https://www.instagram.com/siddharth_kush2002/" target='_blank' aria-label="Instagram">
-                <FaInstagram color='white'/>
+                <FaInstagram color='#f77737'/>
              </a>
              <a href="https://x.com/siddharthK0202" target='_blank' aria-label="Twitter">
-                <FaXTwitter color='white'/>
+                <FaXTwitter color='black'/>
              </a>
         </div>
     </nav>

@@ -142,7 +142,7 @@ function CarouselItem({
 }
 
 function CarouselPrevious({
-  className,
+  className="bg-black opacity-60",
   variant = "outline",
   size = "icon",
   ...props
@@ -155,19 +155,19 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn("absolute size-8 rounded-full", orientation === "horizontal"
-        ? "top-1/2 -left-12 -translate-y-1/2"
+        ? "top-1/2  lg:-left-12 -translate-y-1/2"
         : "-top-12 left-1/2 -translate-x-1/2 rotate-90", className)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <ArrowLeft />
+      <ArrowLeft className=" text-white"/>
       <span className="sr-only">Previous slide</span>
     </Button>
   );
 }
 
 function CarouselNext({
-  className,
+  className="bg-black opacity-60",
   variant = "outline",
   size = "icon",
   ...props
@@ -180,12 +180,12 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn("absolute size-8 rounded-full", orientation === "horizontal"
-        ? "top-1/2 -right-12 -translate-y-1/2"
+        ? "top-1/2 right-2 lg:-right-12 -translate-y-1/2"
         : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className)}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-      <ArrowRight />
+      <ArrowRight className=" text-white"/>
       <span className="sr-only">Next slide</span>
     </Button>
   );

@@ -7,6 +7,7 @@ import Button from './Button'
 import logo from '../assets/logo.png'
 import emailjs from '@emailjs/browser'
 import { toast, Toaster } from 'sonner'
+import { Spinner } from 'flowbite-react'
 
 
 
@@ -19,12 +20,14 @@ const initialFormData = {
 
 function Contact() {
   const [formData, setFormData] = useState(initialFormData)
+  const [isLoading,setIsLoading] =useState(false)
   
   const formRef = useRef()
 
   function sendEmail(e) {
     e.preventDefault() 
  
+    setIsLoading(true)
     emailjs.sendForm(
       import.meta.env.VITE_EMAILJS_SERVICE_ID,
       import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -34,18 +37,20 @@ function Contact() {
         toast('Message sent successfully')
         setFormData(initialFormData)
         formRef.current.reset() 
+        setIsLoading(false)
       })
       .catch((error) => {
         console.error(error)
         toast('Something went wrong')
+        setIsLoading(false)
       })
       
   }
 
   return (
-    <div className="flex flex-col">
-      <div className="border-t border-stone-100 md:pb-10 pb-9 flex flex-col items-center md:flex-row md:justify-between">
-        <div className="md:px-20 px-5 py-10">
+    <div className="relative flex flex-col">
+      <div className="border-t border-stone-500 md:pb-10 pb-9 flex flex-col items-center md:flex-row md:justify-between">
+        <div className="lg:px-20 px-5 py-10 text-stone-700">
           <h2 className="text-4xl">Let's Connect</h2>
           <p className="mt-6">{CONTACT.address}</p>
           <p className="">{CONTACT.phoneNo}</p>
@@ -58,7 +63,7 @@ function Contact() {
           <form
             ref={formRef}
             onSubmit={sendEmail}
-            className="flex flex-col min-w-[80vw] md:min-w-xl"
+            className="flex flex-col min-w-[80vw] md:min-w-[30vw] lg:min-w-xl"
           >
             <div className="flex flex-col mb-4">
               <Label htmlFor="name">Name</Label>
@@ -99,8 +104,8 @@ function Contact() {
               />
             </div>
 
-            <Button text={'Send Message'} />
-            <span className="text-gray-400 mt-1 text-sm">
+            <Button text={'Send Message'} className={'rounded-full'}/>
+            <span className="text-stone-500 mt-1 text-sm">
               *Your message will be delivered to my inbox.
             </span>
           </form>
@@ -110,10 +115,16 @@ function Contact() {
         <a href="/">
           <img src={logo} className="h-5 items-center" />
         </a>
-        <p className="text-[12px] md:text-sm text-stone-400">
+        <p className="text-[12px] md:text-sm text-stone-500">
           © Siddharth Kushwaha :) All rights reserved.
         </p>
       </div>
+      {
+        isLoading &&
+        <div className='absolute flex items-center justify-center top-1/2 left-1/2'> 
+          <Spinner className='h-15 w-15 text-muted-foreground'/>
+        </div>
+      }
     </div>
   )
 }

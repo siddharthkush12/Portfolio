@@ -1,30 +1,32 @@
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import CursorGlow from './components/CursorGlow'
-
+import React from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
+import Education from "./components/Education";
+import { BackgroundBeamsWithCollision } from "./components/ui/background-beams-with-collision";
+import Certificate from "./components/Certificate";
 
 function App() {
   return (
-    <div className='overflow-hidden text-stone-300'>
-      <CursorGlow/>
-      <div className='fixed inset-0 -z-10'>
-        <div className="relative h-full w-full bg-black">
-          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
-          <div className="absolute left-0 right-0 top-[-10%] h-[1000px] w-[1000px] rounded-full bg-[radial-gradient(circle_400px_at_50%_300px,#fbfbfb36,#000)]"></div>
+    <div className="overflow-hidden text-stone-300">
+        <div className="fixed inset-0 -z-10">
+          <div className="relative h-screen w-full bg-white">
+            <BackgroundBeamsWithCollision/>
+          </div>
         </div>
-      </div>
 
-      <div className="container mx-auto px-8 z-10">
-        <Navbar />
-        <Hero />
-        <Projects />
-        <Contact />
+        <div className="container mx-auto px-3 md:px-8 z-10">
+          <Navbar />
+          <Hero />
+          <Projects />
+          <Education />
+          <Certificate/>
+          <Contact />
+        </div>
+    
       </div>
-    </div>
-  )
+  );
 }
 
-export default App
+export default App;

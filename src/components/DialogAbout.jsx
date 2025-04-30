@@ -1,8 +1,8 @@
 import React from 'react'
-import { DialogContent } from './ui/dialog'
+import { DialogContent, DialogHeader, DialogTitle } from './ui/dialog'
 import { HERO_CONTENT } from '@/constants'
 import Button from './Button'
-import ButtonRotatingBackgroundGradient from './ButtonRotatingBackgroundGradient'
+import ButtonRotatingBackgroundGradient from './ui/ButtonRotatingBackgroundGradient'
 
 const techIcons = [
   { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg', alt: 'react' },
@@ -23,13 +23,14 @@ const techIcons = [
 
 function DialogAbout() {
   return (
-    <DialogContent className="bg-stone-900 rounded-2xl w-full max-w-[95%] sm:max-w-[90%] md:max-w-8/12 p-4 
-  max-h-[90vh] overflow-y-auto md:min-h-[50vh] md:overflow-y-visible">
+    <DialogContent className="bg-stone-300 rounded-2xl w-full max-w-[95%] sm:max-w-[90%] md:max-w-8/12 p-4 
+  max-h-[90vh] overflow-y-auto md:min-h-[50vh] md:overflow-y-visible" aria-describedby={undefined}>
+    <DialogHeader><DialogTitle></DialogTitle></DialogHeader>
   <div className="flex flex-col md:flex-row justify-between gap-8">
     {/* About Me Section */}
     <div className="flex flex-col gap-2 w-full md:w-1/2">
-      <span className="text-stone-50 text-lg font-semibold">About Me</span>
-      <p className="text-stone-100 text-sm mb-7">{HERO_CONTENT}</p>
+      <span className="text-stone-700 text-lg font-semibold">About Me</span>
+      <p className="text-stone-700 text-sm mb-7">{HERO_CONTENT}</p>
       <a href="/SiddharthResume.pdf" download="SiddharthResume.pdf">
         <ButtonRotatingBackgroundGradient buttontext={"Download Resume"} />
       </a>
@@ -37,7 +38,7 @@ function DialogAbout() {
 
     {/* Technologies Section */}
     <div className="flex flex-col gap-6 w-full md:w-1/2">
-      <span className="text-stone-50 text-lg font-semibold">Technologies</span>
+      <span className="text-stone-700 text-lg font-semibold">Technologies</span>
       <div className="flex flex-wrap gap-4 md:gap-10 justify-center md:justify-start">
         {techIcons.map((icon, index) => (
           <img
