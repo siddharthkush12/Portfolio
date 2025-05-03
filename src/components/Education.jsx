@@ -22,7 +22,6 @@ function Education() {
             <h3 className="text-stone-800 md:text-2xl">
               Vidyawati Nigam Memorial Public School, Banda UttarPradesh
             </h3>
-            <p className="text-stone-500">B-Tech Computer Science & Engineering 2026</p>
             <p className="text-stone-500">Class-12 (2020), Percentage: 86.2</p>
           </div>
         </div>
@@ -32,7 +31,6 @@ function Education() {
             <h3 className="text-stone-800 md:text-2xl">
               Vidyawati Nigam Memorial Public School, Banda UttarPradesh
             </h3>
-            <p className="text-stone-500">B-Tech Computer Science & Engineering 2026</p>
             <p className="text-stone-500">Class-10 (2018), Percentage: 81</p>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { FaXTwitter } from 'react-icons/fa6'
 
 function Navbar() {
   return (
-    <nav className='flex items-center justify-between'>
+    <nav className='flex items-center justify-between my-4 md:my-0'>
         <div className='flex flex-shrink-0 items-center'>
             <a href="/">
                 <img src={logo} alt="logo" className='mx-2' width={60} height={35}/>
