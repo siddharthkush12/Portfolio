@@ -1,29 +1,3 @@
-import p1 from "../assets/projects/1.png";
-import p2 from "../assets/projects/2.png";
-import p3 from "../assets/projects/3.png";
-import p4 from "../assets/projects/5.png";
-import p5 from "../assets/projects/6.png";
-import p6 from "../assets/projects/7.png";
-import b1 from "../assets/projects/5.png";
-import b2 from "../assets/projects/1.png";
-import b3 from "../assets/projects/2.png";
-import b4 from "../assets/projects/7.png";
-import sw1 from "../assets/projects/sw1.png";
-import sw2 from "../assets/projects/sw2.png";
-import sw3 from "../assets/projects/sw3.png";
-import c1 from "../assets/projects/c1.png";
-import c2 from "../assets/projects/c2.png";
-import c3 from "../assets/projects/c3.png";
-import po1 from "../assets/projects/po1.png";
-import po2 from "../assets/projects/po2.png";
-import po3 from "../assets/projects/po3.png";
-import ho1 from "../assets/projects/ho1.png";
-import cer1 from "../assets/algorithms.jpg";
-import cer2 from "../assets/nlp.jpg";
-import cer3 from "../assets/android.jpg";
-
-
-
 export const HERO_CONTENT = `I am an enthusiastic MERN stack developer with a strong foundation in building modern web applications using MongoDB, Express.js, React, and Node.js. As a fresher, I am constantly learning and applying new skills to real-world projects. I also have a deep interest in solving Data Structures and Algorithms problems, which helps me write efficient and optimized code. I'm excited to contribute to impactful tech solutions and grow as a full-stack developer.`;
 
 export const PROJECTS = [
@@ -32,7 +6,14 @@ export const PROJECTS = [
     live: true,
     link: "https://closify.shop",
     git: "https://github.com/siddharthkush12/E-commerce",
-    image: [p1, p2, p3, p4, p5, p6],
+    image: [
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285280/1_qozdhd.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285278/6_dxjr4j.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285272/5_x5m3ex.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285271/7_luwsl0.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285270/3_k8axni.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285269/2_ksjx2z.png",
+    ],
     description:
       "Closify.shop is a feature-rich, scalable e-commerce web application built using the MERN stack. It offers a seamless shopping experience with real-time cart/wishlist updates, seller and admin dashboards, payment integration, and shop location mapping via Google Maps.",
 
@@ -58,10 +39,25 @@ export const PROJECTS = [
     live: true,
     link: "/",
     git: "https://github.com/siddharthkush12/Portfolio",
-    image: [po1, po2, po3],
+    image: [
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285308/Screenshot_2025-05-03_at_8.42.31_PM_gps2d5.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285293/Screenshot_2025-05-03_at_8.42.39_PM_ys5q5j.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285310/Screenshot_2025-05-03_at_8.43.04_PM_qmelgy.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285318/Screenshot_2025-05-03_at_8.42.50_PM_bvo18x.png",
+      "https://res.cloudinary.com/di4eksvat/image/upload/v1746285319/Screenshot_2025-05-03_at_8.43.11_PM_khtapz.png",
+    ],
     description:
       "A modern, responsive portfolio website showcasing my skills, projects, and achievements. Built with React, Vite, TailwindCSS, and custom API integration for the contact form. The website features a clean UI/UX design, smooth animations, and detailed project displays to give visitors a professional and interactive experience.",
-    technologies: ["JavaScript","TailwindCSS", "React", "Vite", "EmailJS", "ShadCn","Aceternity UI","FlowBite"],
+    technologies: [
+      "JavaScript",
+      "TailwindCSS",
+      "React",
+      "Vite",
+      "EmailJS",
+      "ShadCn",
+      "Aceternity UI",
+      "FlowBite",
+    ],
   },
   {
     title: "Hospital Management System",
@@ -69,7 +65,7 @@ export const PROJECTS = [
     live: true,
     link: "https://hospital-project-1-front.onrender.com",
     git: "https://github.com/siddharthkush12/Hospital_project",
-    image: [ho1],
+    image: ["https://res.cloudinary.com/di4eksvat/image/upload/v1746285281/ho1_jilv3u.png"],
     description:
       "A comprehensive Hospital Management System designed to streamline administrative tasks and enhance patient care. Built with Node.js, Express.js, MongoDB, and React. The system includes features like patient registration, appointment scheduling, medical records management, billing, and a directory of nearby hospitals. It offers an intuitive user interface for doctors, nurses, and admins to manage daily operations effectively and efficiently, while also providing patients with a quick way to find nearby healthcare providers.",
     technologies: [
@@ -85,22 +81,28 @@ export const PROJECTS = [
   },
 
   {
-    title: "DevScribe - Blogging Platform *COMING_SOON",
-    siteText: "Visit DevScribe",
+    title: "MoodMate - Social Network App with AI Features *COMING_SOON",
+    siteText: "Visit MoodMate",
     live: true,
     link: "/",
-    git: "https://github.com/siddharthkush12/Learning_projects/tree/main/02_megablog",
-    image: [b2, b1, b3, b4],
+    git: "https://github.com/siddharthkush12/moodmate",
+    image:["https://res.cloudinary.com/di4eksvat/image/upload/v1746286253/loginimg_bdnhnr.png"],
     description:
-      "DevScribe is a modern blogging platform built using React and Appwrite that enables users to create, edit, and share their own blog posts. The app supports secure authentication, rich text editing, real-time database updates, and a sleek, responsive UI. It includes user profile management, blog categorization, and a comment system to foster community engagement.",
+      "MoodMate is a modern social networking platform designed to connect users and provide AI companionship features. Built with the MERN stack, it allows users to create posts, interact with others through likes and comments, and chat with a human-like AI friend when they're feeling alone. The platform features real-time messaging, profile customization, secure authentication, and a responsive, animated UI.",
     technologies: [
+      "MongoDB",
+      "Express.js",
       "React",
-      "Appwrite",
+      "Node.js",
       "TailwindCSS",
-      "Rich Text Editor",
-      "Appwrite Database",
-      "Appwrite Authentication",
+      "ShadCn",
+      "Redux Toolkit",
+      "JWT Authentication",
       "Framer Motion",
+      "Google API (For login with google)",
+      "Socket.io (for real-time chat)",
+      "OpenAI API (for AI friend)",
+      "..."
     ],
   },
 
@@ -109,7 +111,7 @@ export const PROJECTS = [
     siteText: "Explore on GitHub",
     live: false,
     link: "https://github.com/siddharthkush12/Learning_projects/tree/main/01_swiggy",
-    image: [sw1, sw2, sw3],
+    image: ["https://res.cloudinary.com/di4eksvat/image/upload/v1746285310/sw1_hqaeao.png", "https://res.cloudinary.com/di4eksvat/image/upload/v1746285317/sw2_qjtjli.png", "https://res.cloudinary.com/di4eksvat/image/upload/v1746285314/sw3_sxhztt.png"],
     description:
       "A visually rich frontend-only clone of Swiggy, built using modern React and TailwindCSS. The app replicates the user interface and key client-side functionalities of a food delivery platform, including restaurant listings, dynamic menus, cart system, and responsive design. Data is mocked to simulate real-world interactions.",
     technologies: [
@@ -126,7 +128,7 @@ export const PROJECTS = [
     siteText: "Explore on GitHub",
     live: false,
     link: "https://github.com/siddharthkush12/react-js-learning/tree/main/07_currencyconvert",
-    image: [c1, c3, c2],
+    image: ["https://res.cloudinary.com/di4eksvat/image/upload/v1746285277/c1_vf67zf.png", "https://res.cloudinary.com/di4eksvat/image/upload/v1746285281/c3_h9whtk.png", "https://res.cloudinary.com/di4eksvat/image/upload/v1746285281/c2_fyjcru.png"],
     description:
       "A sleek and simple currency converter web app built with React. It allows users to convert between various currencies using real-time exchange rates. The app features clean UI, responsive design, and intuitive controls for selecting currencies and entering amounts.",
     technologies: [
@@ -136,7 +138,7 @@ export const PROJECTS = [
       "REST API",
       "Axios",
       "React Hooks",
-      "Javascript"
+      "Javascript",
     ],
   },
 ];
@@ -147,8 +149,8 @@ export const CONTACT = {
   email: "siddharth5044549.com",
 };
 
-export const CERTIFICATE=[
+export const CERTIFICATE = [
   {
-    certificate:[cer1,cer2,cer3]
-  }
-]
+    certificate: ["https://res.cloudinary.com/di4eksvat/image/upload/v1746285909/nlp_velozk.jpg", "https://res.cloudinary.com/di4eksvat/image/upload/v1746285908/algorithms_brlacg.jpg", "https://res.cloudinary.com/di4eksvat/image/upload/v1746285908/android_wq7pig.jpg"],
+  },
+];

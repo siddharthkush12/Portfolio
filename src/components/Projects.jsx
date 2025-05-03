@@ -103,6 +103,44 @@ function Projects() {
       ),
     },
     {
+      title: "2025 (Still Working)",
+      content: (
+        <div className="bg-white rounded-2xl max-w-5xl mx-auto">
+          <p className="mb-2 text-base md:text-xl font-semibold text-neutral-800">
+            {PROJECTS[3].title}
+          </p>
+          <p className="mb-2 text-sm md:text-base text-neutral-600 ">
+            {PROJECTS[3].description}
+          </p>
+          <div className="text-sm md:text-base text-neutral-700 my-4">
+            <div className="flex flex-wrap gap-2">
+              {PROJECTS[3].technologies.map((tech, idx) => {
+                return (
+                  <div
+                    key={idx}
+                    className="border py-1 px-2 md:py-2 md:px-4 text-sm md:text-md border-gray-400 rounded-full"
+                  >
+                    {tech}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="mt-5 w-full flex justify-center">
+            <ProjectCard cardItem={PROJECTS[3]} />
+          </div>
+          <div className="flex gap-2 items-center mt-2">
+            <a href={PROJECTS[3].git} target="_blank">
+              <ButtonRotatingBackgroundGradient
+                buttontext={"Explore on GitHub"}
+              />
+            </a>
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Febuary 2025",
       content: (
         <div className="bg-white rounded-2xl max-w-5xl mx-auto">
