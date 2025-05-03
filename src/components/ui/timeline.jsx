@@ -8,22 +8,35 @@ export const Timeline = ({ data }) => {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
+    const observer = new ResizeObserver((entries) => {
+      for (let entry of entries) {
+        setHeight(entry.contentRect.height);
+      }
+    });
+  
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
+      observer.observe(ref.current);
     }
-  }, [ref]);
-
+  
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+  
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 10%", "end 50%"],
   });
+  
+ 
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div className="w-full bg-white font-sans md:px-10" ref={containerRef}>
+    <div className="w-full bg-white font-sans md:px-10 min-h-screen" ref={containerRef}>
       <h2 className="text-center text-xl md:text-4xl bg-gradient-to-r from-[#E2CBFF] to-[#393BB2] bg-clip-text text-transparent relative z-10 mt-20 md:mt-50">
         PROJECTS
       </h2>
